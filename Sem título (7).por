@@ -7,6 +7,7 @@ programa {
     leia(nome)
     escreva("Qual sua classe?(Mago, Mochileiro, Guerreiro, Curandeiro, Assassino): ")
     leia(classe)
+   classe=t.caixa_baixa(classe)
     escolha(classe){
       caso "Mago": escreva("Vantagens:Ataque a longa distância, magia de proteção\n")escreva("Desvantagens: Pouca experiência de combate")
       pare             
@@ -21,6 +22,7 @@ programa {
     }
     escreva("\nQual sua raça?(Humano, Elfo, Anão, Ogro, Híbrido felino): ")
     leia(raca)
+  raca=t.caixa_baixa(raca)
 escolha(raca){
       caso "elfo":escreva("Vantagens:beleza explendida, é um magnata.\n")escreva("Desvantegens:Pouca furtividade, Só sabe lutar com flechas")
       pare
