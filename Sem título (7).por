@@ -46,13 +46,18 @@ escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda u
 
 
     pare
-    caso "esquerda":escreva("Você chegou a masmorra e entrou nela.\n")
+    caso "cidade":escreva("Você chegou na cidade!\n")
     
 
+
+    pare
+    caso "masmorra":escreva("Você chegou a masmorra e entrou nela.\n")
 
 
 
     pare
+    caso "esquerda":escreva("Você chegou a masmorra e entrou nela.\n")
+    
   }
  }
 }   
