@@ -38,5 +38,21 @@ escolha(raca){
 escreva("\nterminou de ler? ")
     leia(termino)
     limpa()
+escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda uma masmorra,qual você deseja ir?")
+  leia(desejo)
+  escolha(desejo){
+    caso "direita":escreva("Você chegou na cidade!\n")
+
+
+
+    pare
+    caso "esquerda":escreva("Você chegou a masmorra e entrou nela.\n")
+    
+
+
+
+
+    pare
+  }
  }
 }   
