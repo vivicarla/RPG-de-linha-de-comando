@@ -9,15 +9,15 @@ programa {
     leia(classe)
    classe=t.caixa_baixa(classe)
     escolha(classe){
-      caso "Mago": escreva(" Vantagens:Ataque a longa distância, magia de proteção\n")escreva(" Desvantagens: Pouca experiência de combate")
+      caso "mago": escreva(" Vantagens:Ataque a longa distância, magia de proteção\n")escreva(" Desvantagens: Pouca experiência de combate")
       pare             
-      caso "Mochileiro": escreva(" Vantagens:inventario grande conhecimentos sobre muitas culturas e línguas\n")escreva(" Desvantagens:pouca agilidade pouca experiencia de batalha")
+      caso "mochileiro": escreva(" Vantagens:inventario grande conhecimentos sobre muitas culturas e línguas\n")escreva(" Desvantagens:pouca agilidade pouca experiencia de batalha")
       pare             
-      caso "Guerreiro": escreva(" Vantagens:consegue se curar conhecimentos de ervas e venenos\n")escreva(" Desvantagens:pouca inteligência um pouco lento")
+      caso "guerreiro": escreva(" Vantagens:consegue se curar conhecimentos de ervas e venenos\n")escreva(" Desvantagens:pouca inteligência um pouco lento")
       pare             
-      caso "Curandeiro": escreva(" Vantagens:Ataque a longa distância, magia de proteção\n")escreva(" Desvantagens:pouca força pouca experiencia de batalha")
+      caso "curandeiro": escreva(" Vantagens:Ataque a longa distância, magia de proteção\n")escreva(" Desvantagens:pouca força pouca experiencia de batalha")
       pare             
-      caso "Assassino": escreva(" Vantagens:furtivo, agil\n")escreva(" Desvantagens:procurado pela justiça, passado traumático")
+      caso "assassino": escreva(" Vantagens:furtivo, agil\n")escreva(" Desvantagens:procurado pela justiça, passado traumático")
       pare             
     }
     escreva("\nQual sua raça?(Humano, Elfo, Anão, Ogro, Híbrido felino): ")
