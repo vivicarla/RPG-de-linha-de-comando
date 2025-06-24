@@ -2,7 +2,7 @@ programa {
   inclua biblioteca Texto-->t
  inclua biblioteca Util-->u
   funcao inicio() {
-    cadeia nome, raca, classe,termino
+    cadeia nome, raca, classe,termino, desejo
     escreva("Qual o seu nome?: ")
     leia(nome)
     escreva("Qual sua classe?(Mago, Mochileiro, Guerreiro, Curandeiro, Assassino): ")
