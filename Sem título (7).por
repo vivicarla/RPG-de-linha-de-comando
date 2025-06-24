@@ -52,12 +52,35 @@ escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda u
 
     pare
     caso "masmorra":escreva("Você chegou a masmorra e entrou nela.\n")
-
-
-
-    pare
+     inteiro monstro, personagem
+      escreva("Você encontrou um monstro!\n")
+      escreva("O monstro te atacou, qual o ataque dele?: ")
+      leia(monstro)
+      escreva("Qual o seu ataque?: ")
+      leia(personagem)
+      se(monstro<personagem){
+        escreva("Vitoria!! Você deixou o monstro todo capengo.")
+      }senao se(monstro>personagem){
+        escreva("Derrota🤦 O monstro acabou contigo.")
+      }senao{
+        escreva("Você e o monstro estão machucados.")
+      }
+      pare
     caso "esquerda":escreva("Você chegou a masmorra e entrou nela.\n")
-    
+    inteiro monstro, personagem
+      escreva("Você encontrou um monstro!\n")
+      escreva("O monstro te atacou, qual o ataque dele?: ")
+      leia(monstro)
+      escreva("Qual o seu ataque?: ")
+      leia(personagem)
+      se(monstro<personagem){
+        escreva("Vitoria!! Você deixou o monstro todo capengo.")
+      }senao se(monstro>personagem){
+        escreva("Derrota🤦 O monstro acabou contigo.")
+      }senao{
+        escreva("Você e o monstro estão machucados.")
+      }
+      pare
   }
  }
 }   
