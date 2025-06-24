@@ -1,4 +1,5 @@
-programa {
+programa { inclua biblioteca Texto-->t 
+  inclua biblioteca Util-->u 
   funcao inicio() {
     cadeia nome, raca, classe
     escreva("Qual seu nome?: ")
@@ -12,10 +13,13 @@ programa {
       pare             
       caso "Mago": escreva("Vantagens:Ataque a longa distância, magia de proteção")escreva("Desvantagens: Pouca experiência de combate")
       pare             
-      caso "Mago": escreva("Vantagens:Ataque a longa distância, magia de proteção")escreva("Desvantagens: Pouca experiência de combate")
+      caso "Mago": escreva("Vantagens:Ataque a longa distância, magia de proteção \n")
+      escreva("Desvantagens: Pouca experiência de combate")
       pare             
     }
     escreva("Qual sua raça?(Humano, Elfo, Anão, Ogro, Híbrido felino): ")
     leia(raca)
+    
+    
  }
 }   
