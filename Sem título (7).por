@@ -90,33 +90,58 @@ escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda u
 
     pare
     caso "masmorra":escreva("Você chegou a masmorra e entrou nela.\n")
-     inteiro monstro, personagem
-      escreva("Você encontrou um monstro!\n")
-      escreva("O monstro te atacou, qual o ataque dele?: ")
+    inteiro monstro, personagem
+      escreva("Você encontrou morcegos!\n")
+      escreva("Os morcegos te atacaram, qual foi o dano deles em você?: ")
       leia(monstro)
+      escreva("Eles te machucaram e você revidou.")
       escreva("Qual o seu ataque?: ")
       leia(personagem)
       se(monstro<personagem){
-        escreva("Vitoria!! Você deixou o monstro todo capengo.")
+        escreva("Vitoria!! Você deixou os morcegos todos capengas.\n")
+        escreva("Você continua até o final da masmorra encontrando um baú cheio de jóias que tornaram você o ",classe," mais famoso e rico deste estranho lugar.\n")
+        escreva("fim!")
       }senao se(monstro>personagem){
-        escreva("Derrota🤦 O monstro acabou contigo.")
+        escreva("Derrota🤦 Os morcegos acabaram contigo.\n")
+        escolha(classe){
+          caso "assassino":escreva("Você consegue com muita dificuldade chegar a estrada,você é um assassino procurado então teve que esperar uma carruaguem passar para conseguir se esconder dos guardas reais para conseguir se recuperar da masmorra.\n")
+          pare
+          caso contrario:escreva("Alguns aventureiro te encontrarem te levaram para a cidade para se recuperar.\n")
+          
+        }escreva("fim!")
+      
       }senao{
-        escreva("Você e o monstro estão machucados.")
+        escreva("Você e os morcegos estão machucados.\n")
+        escreva("Você se obriga fugir dos morcegos e se preparar melhor para a proxima\n")
+        escreva("fim!")
       }
       pare
-    caso "esquerda":escreva("Você chegou a masmorra e entrou nela.\n")
+      pare
+   caso "esquerda":escreva("Você chegou a masmorra e entrou nela.\n")
     inteiro monstro, personagem
-      escreva("Você encontrou um monstro!\n")
-      escreva("O monstro te atacou, qual o ataque dele?: ")
+      escreva("Você encontrou morcegos!\n")
+      escreva("Os morcegos te atacaram, qual foi o dano deles em você?: ")
       leia(monstro)
+      escreva("Eles te machucaram e você revidou.")
       escreva("Qual o seu ataque?: ")
       leia(personagem)
       se(monstro<personagem){
-        escreva("Vitoria!! Você deixou o monstro todo capengo.")
+        escreva("Vitoria!! Você deixou os morcegos todos capengas.\n")
+        escreva("Você continua até o final da masmorra encontrando um baú cheio de jóias que tornaram você o ",classe," mais famoso e rico deste estranho lugar.\n")
+        escreva("fim!")
       }senao se(monstro>personagem){
-        escreva("Derrota🤦 O monstro acabou contigo.")
+        escreva("Derrota🤦 Os morcegos acabaram contigo.\n")
+        escolha(classe){
+          caso "assassino":escreva("Você consegue com muita dificuldade chegar a estrada,você é um assassino procurado então teve que esperar uma carruaguem passar para conseguir se esconder dos guardas reais para conseguir se recuperar da masmorra.\n")
+          pare
+          caso contrario:escreva("Alguns aventureiro te encontrarem te levaram para a cidade para se recuperar.\n")
+          
+        }escreva("fim!")
+      
       }senao{
-        escreva("Você e o monstro estão machucados.")
+        escreva("Você e os morcegos estão machucados.\n")
+        escreva("Você se obriga fugir dos morcegos e se preparar melhor para a proxima\n")
+        escreva("fim!")
       }
       pare
   }
