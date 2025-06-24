@@ -1,5 +1,6 @@
 programa {
   inclua biblioteca Texto-->t
+ inclua biblioteca Util-->u
   funcao inicio() {
     cadeia nome, raca, classe
     escreva("Qual seu nome?: ")
