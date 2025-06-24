@@ -3,14 +3,12 @@ programa {
  inclua biblioteca Util-->u
   funcao inicio() {
     cadeia nome, raca, classe
-    escreva("Qual seu nome?: ")
-    leia(nome)
     escreva("Qual sua classe?(Mago, Mochileiro, Guerreiro, Curandeiro, Assassino): ")
     leia(classe)
     escolha(classe){
       caso "Mago": escreva("Vantagens:Ataque a longa distância, magia de proteção\n")escreva("Desvantagens: Pouca experiência de combate")
       pare             
-      caso "Mochileiro": escreva("vantagens inventario grande conhecimentos sobre muitas culturas e línguas\n")escreva("desvantagenspouca agilidade pouca experiencia de batalha")
+      caso "Mochileiro": escreva("vantagens:inventario grande conhecimentos sobre muitas culturas e línguas\n")escreva("desvantagens:pouca agilidade pouca experiencia de batalha")
       pare             
       caso "Guerreiro": escreva("Vantagens:consegue se curar conhecimentos de ervas e venenos\n")escreva("Desvantagens:pouca inteligência um pouco lento")
       pare             
