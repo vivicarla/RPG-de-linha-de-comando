@@ -2,7 +2,7 @@ programa {
   inclua biblioteca Texto-->t
  inclua biblioteca Util-->u
   funcao inicio() {
-    cadeia nome, raca, classe
+    cadeia nome, raca, classe,termino
     escreva("Qual o seu nome?: ")
     leia(nome)
     escreva("Qual sua classe?(Mago, Mochileiro, Guerreiro, Curandeiro, Assassino): ")
@@ -35,5 +35,8 @@ escolha(raca){
       caso "híbrido felino":escreva(" Vantagens:Boa audição, e Boa visão.\n")escreva(" Desvantegens:Erva do gato, Pavor de água, Medo de cobra")
       pare
     }
+escreva("\nterminou de ler? ")
+    leia(termino)
+    limpa()
  }
 }   
