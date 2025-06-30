@@ -18,7 +18,8 @@ programa {
       caso "curandeiro": escreva(" Vantagens:Ataque a longa distância, magia de proteção\n")escreva(" Desvantagens:pouca força pouca experiencia de batalha")
       pare             
       caso "assassino": escreva(" Vantagens:furtivo, agil\n")escreva(" Desvantagens:procurado pela justiça, passado traumático")
-      pare             
+      pare   
+      caso contrario: escreva("classe inválida")
     }
     escreva("\nQual sua raça?(Humano, Elfo, Anão, Ogro, Híbrido felino): ")
     leia(raca)
@@ -34,6 +35,7 @@ escolha(raca){
       pare
       caso "híbrido felino":escreva(" Vantagens:Boa audição, e Boa visão.\n")escreva(" Desvantegens:Erva do gato, Pavor de água, Medo de cobra")
       pare
+      caso contrario: escreva("raça inválida")
     }
 escreva("\nterminou de ler?(enter) ")
     leia(termino)
@@ -117,6 +119,7 @@ escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda u
 
 
     pare
+  
     caso "cidade":escreva("Você chegou na cidade!\n")
     inteiro ouro,suprimentos,opcao
    ouro=50
