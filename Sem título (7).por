@@ -130,11 +130,11 @@ escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda u
   escreva("Opção:")
   leia(opcao)
   escolha(opcao){
-    caso 1:escreva("Você comprou um suprimento\n")
+    caso "1":escreva("Você comprou um suprimento\n")
     pare
-    caso 2:escreva("Você equipou seus suprimentos\n")
+    caso "2":escreva("Você equipou seus suprimentos\n")
     pare
-    caso 3:escreva("Você saiu da cidade e foi para a masmorra!\n")
+    caso "3":escreva("Você saiu da cidade e foi para a masmorra!\n")
      inteiro monstro, personagem
       escreva("Você encontrou morcegos!\n")
       escreva("Os morcegos te atacaram.\n ")
