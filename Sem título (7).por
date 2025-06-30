@@ -38,15 +38,15 @@ escolha(raca){
 escreva("\nterminou de ler? ")
     leia(termino)
     limpa()
-escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda uma masmorra,qual você deseja ir?")
+escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda uma masmorra,qual você deseja ir? ")
   leia(desejo)
   escolha(desejo){
     caso "direita":escreva("Você chegou na cidade!\n")
      inteiro ouro,suprimentos,opcao
    ouro=50
    suprimentos=0
-   escreva("Você tem, ",ouro," moedas de ouro.\n")
-  escreva("Você possui, ", suprimentos," suprimentos.")
+   escreva("Você tem ",ouro," moedas de ouro.\n")
+  escreva("Você possui ", suprimentos," suprimentos.")
   escreva("\nEscolha uma opção:\n")
   escreva("1- comprar suprimentos.\n")
   escreva("2- equipar equipamentos.\n")
@@ -59,6 +59,58 @@ escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda u
     caso 2:escreva("Você equipou seus suprimentos\n")
     pare
     caso 3:escreva("Você saiu da cidade e foi para a masmorra!\n")
+     inteiro monstro, personagem
+      escreva("Você encontrou morcegos na masmorra!\n")
+      escreva("Os morcegos te atacaram.\n ")
+      escreva("Eles te machucaram e você revidou.\n")
+      monstro=50
+      escreva("dê um enter para rodar o dado d100 para o dano. \n")
+    
+      personagem=u.sorteia(1,100)
+      escreva("Seu dano foi ", personagem)
+      escolha(raca){
+        caso "elfo":personagem+10 escreva("\nvocê ganha +10 por ser um elfo.")
+        pare
+        caso "anão": personagem+15 escreva("\n você ganhou +15 por ser um anão.")
+        pare
+        caso "ogro": personagem+20 escreva("\n você ganhou +20 por ser um ogro.")
+        pare
+        caso "híbrido de felino": personagem+5 escreva("\n você ganhou +5 por ser um híbrido.")
+        pare
+      }
+      escolha(classe){
+        caso "mago":personagem-5 escreva("\n você perdeu 5 por ser um mago.")
+        pare
+        caso "mochileiro":personagem-15 escreva("\n você perdeu 15 por ser um mochileiro.")
+        pare
+        caso "guerreiro":personagem+15 escreva("\n você ganhou 15 por ser um guerreiro.")
+        pare
+        caso "curandeiro":personagem-10 escreva("\n você perdeu 10 por ser um curandeiro.")
+        pare
+        caso "assassino":personagem+10 escreva("\n você ganhou 10 por ser um assassino.")
+        pare
+      }
+      
+      
+      se(monstro<personagem){
+        escreva("\nVitoria!! Você deixou os morcegos todos capengas.\n")
+        escreva("Você continua até o final da masmorra encontrando um baú cheio de jóias que tornaram você o ",classe," mais famoso e rico deste estranho lugar.\n")
+        escreva("fim!")
+      }senao se(monstro>personagem){
+        escreva("\nDerrota🤦 Os morcegos acabaram contigo.\n")
+        escolha(classe){
+          caso "assassino":escreva("Você consegue com muita dificuldade chegar a estrada,você é um assassino procurado então teve que esperar uma carruaguem passar para conseguir se esconder dos guardas reais para conseguiro se recuperar da masmorra.\n")
+          pare
+          caso contrario:escreva("Alguns aventureiro te encontrarem te levaram para a cidade para se recuperar.\n")
+          
+        }escreva("fim!")
+      
+      }senao{
+        escreva("\nVocê e os morcegos estão machucados.\n")
+        escreva("Você se obriga fugir dos morcegos e se preparar melhor para a proxima\n")
+        escreva("fim!")
+      }
+      pare
     pare
     
   }
@@ -83,63 +135,164 @@ escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda u
     caso 2:escreva("Você equipou seus suprimentos\n")
     pare
     caso 3:escreva("Você saiu da cidade e foi para a masmorra!\n")
-    pare
-    
-  }
-
-
-    pare
-    caso "masmorra":escreva("Você chegou a masmorra e entrou nela.\n")
-    inteiro monstro, personagem
+     inteiro monstro, personagem
       escreva("Você encontrou morcegos!\n")
-      escreva("Os morcegos te atacaram, qual foi o dano deles em você?: ")
-      leia(monstro)
-      escreva("Eles te machucaram e você revidou.")
-      escreva("Qual o seu ataque?: ")
-      leia(personagem)
+      escreva("Os morcegos te atacaram.\n ")
+      escreva("Eles te machucaram e você revidou.\n")
+      monstro=50
+      escreva("dê um enter para rodar o dado d100 para o dano. \n")
+    
+      personagem=u.sorteia(1,100)
+      escreva("Seu dano foi ", personagem)
+      escolha(raca){
+        caso "elfo":personagem+10 escreva("\nvocê ganha +10 por ser um elfo.")
+        pare
+        caso "anão": personagem+15 escreva("\n você ganhou +15 por ser um anão.")
+        pare
+        caso "ogro": personagem+20 escreva("\n você ganhou +20 por ser um ogro.")
+        pare
+        caso "híbrido de felino": personagem+5 escreva("\n você ganhou +5 por ser um híbrido.")
+        pare
+      }
+      escolha(classe){
+        caso "mago":personagem-5 escreva("\n você perdeu 5 por ser um mago.")
+        pare
+        caso "mochileiro":personagem-15 escreva("\n você perdeu 15 por ser um mochileiro.")
+        pare
+        caso "guerreiro":personagem+15 escreva("\n você ganhou 15 por ser um guerreiro.")
+        pare
+        caso "curandeiro":personagem-10 escreva("\n você perdeu 10 por ser um curandeiro.")
+        pare
+        caso "assassino":personagem+10 escreva("\n você ganhou 10 por ser um assassino.")
+        pare
+      }
+      
+      
       se(monstro<personagem){
-        escreva("Vitoria!! Você deixou os morcegos todos capengas.\n")
+        escreva("\nVitoria!! Você deixou os morcegos todos capengas.\n")
         escreva("Você continua até o final da masmorra encontrando um baú cheio de jóias que tornaram você o ",classe," mais famoso e rico deste estranho lugar.\n")
         escreva("fim!")
       }senao se(monstro>personagem){
-        escreva("Derrota🤦 Os morcegos acabaram contigo.\n")
+        escreva("\nDerrota🤦 Os morcegos acabaram contigo.\n")
         escolha(classe){
-          caso "assassino":escreva("Você consegue com muita dificuldade chegar a estrada,você é um assassino procurado então teve que esperar uma carruaguem passar para conseguir se esconder dos guardas reais para conseguir se recuperar da masmorra.\n")
+          caso "assassino":escreva("Você consegue com muita dificuldade chegar a estrada,você é um assassino procurado então teve que esperar uma carruaguem passar para conseguir se esconder dos guardas reais para conseguiro se recuperar da masmorra.\n")
           pare
           caso contrario:escreva("Alguns aventureiro te encontrarem te levaram para a cidade para se recuperar.\n")
           
         }escreva("fim!")
       
       }senao{
-        escreva("Você e os morcegos estão machucados.\n")
+        escreva("\nVocê e os morcegos estão machucados.\n")
         escreva("Você se obriga fugir dos morcegos e se preparar melhor para a proxima\n")
         escreva("fim!")
       }
       pare
-      pare
-   caso "esquerda":escreva("Você chegou a masmorra e entrou nela.\n")
-    inteiro monstro, personagem
+    pare
+    
+  }
+    caso "masmorra":escreva("Você chegou a masmorra e entrou nela.\n")
+     inteiro monstro, personagem
       escreva("Você encontrou morcegos!\n")
-      escreva("Os morcegos te atacaram, qual foi o dano deles em você?: ")
-      leia(monstro)
-      escreva("Eles te machucaram e você revidou.")
-      escreva("Qual o seu ataque?: ")
-      leia(personagem)
+      escreva("Os morcegos te atacaram.\n ")
+      escreva("Eles te machucaram e você revidou.\n")
+      monstro=50
+      escreva("dê um enter para rodar o dado d100 para o dano. \n")
+    
+      personagem=u.sorteia(1,100)
+      escreva("Seu dano foi ", personagem)
+      escolha(raca){
+        caso "elfo":personagem+10 escreva("\nvocê ganha +10 por ser um elfo.")
+        pare
+        caso "anão": personagem+15 escreva("\n você ganhou +15 por ser um anão.")
+        pare
+        caso "ogro": personagem+20 escreva("\n você ganhou +20 por ser um ogro.")
+        pare
+        caso "híbrido de felino": personagem+5 escreva("\n você ganhou +5 por ser um híbrido.")
+        pare
+      }
+      escolha(classe){
+        caso "mago":personagem-5 escreva("\n você perdeu 5 por ser um mago.")
+        pare
+        caso "mochileiro":personagem-15 escreva("\n você perdeu 15 por ser um mochileiro.")
+        pare
+        caso "guerreiro":personagem+15 escreva("\n você ganhou 15 por ser um guerreiro.")
+        pare
+        caso "curandeiro":personagem-10 escreva("\n você perdeu 10 por ser um curandeiro.")
+        pare
+        caso "assassino":personagem+10 escreva("\n você ganhou 10 por ser um assassino.")
+        pare
+      }
+      
+      
       se(monstro<personagem){
-        escreva("Vitoria!! Você deixou os morcegos todos capengas.\n")
+        escreva("\nVitoria!! Você deixou os morcegos todos capengas.\n")
         escreva("Você continua até o final da masmorra encontrando um baú cheio de jóias que tornaram você o ",classe," mais famoso e rico deste estranho lugar.\n")
         escreva("fim!")
       }senao se(monstro>personagem){
-        escreva("Derrota🤦 Os morcegos acabaram contigo.\n")
+        escreva("\nDerrota🤦 Os morcegos acabaram contigo.\n")
         escolha(classe){
-          caso "assassino":escreva("Você consegue com muita dificuldade chegar a estrada,você é um assassino procurado então teve que esperar uma carruaguem passar para conseguir se esconder dos guardas reais para conseguir se recuperar da masmorra.\n")
+          caso "assassino":escreva("Você consegue com muita dificuldade chegar a estrada,você é um assassino procurado então teve que esperar uma carruaguem passar para conseguir se esconder dos guardas reais para conseguiro se recuperar da masmorra.\n")
           pare
           caso contrario:escreva("Alguns aventureiro te encontrarem te levaram para a cidade para se recuperar.\n")
           
         }escreva("fim!")
       
       }senao{
-        escreva("Você e os morcegos estão machucados.\n")
+        escreva("\nVocê e os morcegos estão machucados.\n")
+        escreva("Você se obriga fugir dos morcegos e se preparar melhor para a proxima\n")
+        escreva("fim!")
+      }
+      pare
+
+  
+
+   caso "esquerda":escreva("Você chegou a masmorra e entrou nela.\n")
+    inteiro monstro, personagem
+      escreva("Você encontrou morcegos!\n")
+      escreva("Os morcegos te atacaram.\n ")
+      escreva("Eles te machucaram e você revidou.\n")
+      monstro=50
+      escreva("dê um enter para rodar o dado d100 para o dano. \n")
+    
+      personagem=u.sorteia(1,100)
+      escreva("Seu dano foi ", personagem)
+      escolha(raca){
+        caso "elfo":personagem+10 escreva("\nvocê ganha +10 por ser um elfo.")
+        pare
+        caso "anão": personagem+15 escreva("\n você ganhou +15 por ser um anão.")
+        pare
+        caso "ogro": personagem+20 escreva("\n você ganhou +20 por ser um ogro.")
+        pare
+        caso "híbrido de felino": personagem+5 escreva("\n você ganhou +5 por ser um híbrido.")
+        pare
+      }
+      escolha(classe){
+        caso "mago":personagem-5 escreva("\n você perdeu 5 por ser um mago.")
+        pare
+        caso "mochileiro":personagem-15 escreva("\n você perdeu 15 por ser um mochileiro.")
+        pare
+        caso "guerreiro":personagem+15 escreva("\n você ganhou 15 por ser um guerreiro.")
+        pare
+        caso "curandeiro":personagem-10 escreva("\n você perdeu 10 por ser um curandeiro.")
+        pare
+        caso "assassino":personagem+10 escreva("\n você ganhou 10 por ser um assassino.")
+        pare
+      }
+      se(monstro<personagem){
+        escreva("\nVitoria!! Você deixou os morcegos todos capengas.\n")
+        escreva("Você continua até o final da masmorra encontrando um baú cheio de jóias que tornaram você o ",classe," mais famoso e rico deste estranho lugar.\n")
+        escreva("fim!")
+      }senao se(monstro>personagem){
+        escreva("\nDerrota🤦 Os morcegos acabaram contigo.\n")
+        escolha(classe){
+          caso "assassino":escreva("Você consegue com muita dificuldade chegar a estrada,você é um assassino procurado então teve que esperar uma carruaguem passar para conseguir se esconder dos guardas reais para conseguiro se recuperar da masmorra.\n")
+          pare
+          caso contrario:escreva("Alguns aventureiro te encontrarem te levaram para a cidade para se recuperar.\n")
+          
+        }escreva("fim!")
+      
+      }senao{
+        escreva("\nVocê e os morcegos estão machucados.\n")
         escreva("Você se obriga fugir dos morcegos e se preparar melhor para a proxima\n")
         escreva("fim!")
       }
