@@ -35,7 +35,7 @@ escolha(raca){
       caso "híbrido felino":escreva(" Vantagens:Boa audição, e Boa visão.\n")escreva(" Desvantegens:Erva do gato, Pavor de água, Medo de cobra")
       pare
     }
-escreva("\nterminou de ler? ")
+escreva("\nterminou de ler?(enter) ")
     leia(termino)
     limpa()
 escreva("Você acordou na estrada, à sua direita, há uma cidade, à esquerda uma masmorra,qual você deseja ir? ")
